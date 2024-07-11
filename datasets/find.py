@@ -1,3 +1,4 @@
+# 这是用来处理图片文件夹和对应的标注文件夹中文件数量不对应的情况，此代码可找出两者中不同的文件名
 import os
 
 def find_unique_files(folder1, folder2):
@@ -14,8 +15,8 @@ def find_unique_files(folder1, folder2):
     return unique_to_folder1, unique_to_folder2
 
 # 使用示例
-folder1 = 'E:/vscodeProject/robotcub/guojisai/datasets/images'  # 替换为你的文件夹1路径
-folder2 = 'E:/vscodeProject/robotcub/guojisai/datasets/annotations'  # 替换为你的文件夹2路径
+folder1 = 'pictures'  # 替换为你的文件夹1路径
+folder2 = 'json'  # 替换为你的文件夹2路径
 
 unique_to_folder1, unique_to_folder2 = find_unique_files(folder1, folder2)
 

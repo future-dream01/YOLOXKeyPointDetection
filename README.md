@@ -1,10 +1,11 @@
 # 这是基于YOLOX，经修改过后可以用于关键点检测的模型，对应标注软件：Labelme
 ## 准备数据集
-1. 将特征点标注软件labelme标注后的json文件放入json文件夹
-2. 运行**datasets/json_txt.py**,这一步是为了将json文件转换为每行只包含标签和特征点坐标的txt文件
-3. 运行**datasets/test.py**，在程序内修改特征点数，此程序确保转换后的txt文件中每行的元素个数一定是**标签+特征点个数*2**
-4. 将验证过的txt文件和图片放入**data**文件夹下，并在里面创建**class_names.txt**文件，在其中写入类名，一行一个，不用双引号
-5. 运行**datasets/coco.py**,在程序里修改特征点数和训练集所占比例即可按照data中的文件生成coco文件夹
+1. 将特征点标注软件labelme标注后的json文件放入datasets/json文件夹,将图片文件放入datasets/picture文件夹
+2. 如果图片数量和json文件数量不一样，运行**datasets/find.py**,找出两者不一样的文件名
+3. 运行**datasets/json_txt.py**,这一步是为了将json文件转换为每行只包含标签和特征点坐标的txt文件
+4. 运行**datasets/test.py**，在程序内修改特征点数，此程序确保转换后的txt文件中每行的元素个数一定是**标签+特征点个数*2**
+5. 将验证过的txt文件和图片放入**data**文件夹下，并在里面创建**class_names.txt**文件，在其中写入类名，一行一个，不用双引号
+6. 运行**datasets/coco.py**,在程序里修改特征点数和训练集所占比例即可按照data中的文件生成coco文件夹
    
 ## 修改配置文件
 1. 使用**exps/example/custom/yolox_s.py**文件作为模型配置文件修改里面的**self.num_classes**参数为自己的类别数量， **self.num_apexes**为特征点数，**self.max_epoch**为轮次数
