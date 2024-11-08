@@ -11,7 +11,7 @@ import cv2
 
 import torch
 import sys
-sys.path.append("E:/vscodeProject/robotcub/guojisai")
+sys.path.append("E:/vscodeProject/Githubcode/YOLOX__KeyPoint_Detection")
 from yolox.data.data_augment import ValTransform
 from yolox.data.datasets import COCO_CLASSES
 from yolox.exp import get_exp

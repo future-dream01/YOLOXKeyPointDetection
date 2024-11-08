@@ -6,7 +6,7 @@ import json
 import random
 import shutil
 
-num = 5             # 定义所要识别的物体的特征点数
+num = 4             # 定义所要识别的物体的特征点数
 persent = 0.8       # 训练集在所有数据中所占的比例
 
 def get_polygon_annotations(txt_path, class_names):

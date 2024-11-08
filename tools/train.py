@@ -11,7 +11,7 @@ import torch
 import torch.backends.cudnn as cudnn
 import torch
 import sys
-sys.path.append("E:/vscodeProject/robotcub/guojisai")
+sys.path.append("E:/vscodeProject/Githubcode/YOLOX__KeyPoint_Detection")
 from yolox.core import Trainer, TrainerWithTeacher,launch
 from yolox.exp import get_exp
 from yolox.utils import configure_module, configure_nccl, configure_omp, get_num_devices

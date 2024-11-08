@@ -1,0 +1,7 @@
+datasets/coco
+*.png
+*.jpg
+*.jpeg
+*.txt
+*.json
+YOLOX_outputs/
