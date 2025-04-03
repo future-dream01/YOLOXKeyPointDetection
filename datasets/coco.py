@@ -30,8 +30,8 @@ def generate_keypoints(polygon):
         keypoints.extend([polygon[i], polygon[i+1], 2]) # 2表示该关键点是可见的
     return keypoints
 
-data_path = 'data/'
-output_dir = 'coco/'
+data_path = 'datasets/data/'
+output_dir = 'datasets/coco/'
 jsons_path = os.path.join(output_dir, 'annotations/')
 train_imgs_path = os.path.join(output_dir, 'images/')
 val_imgs_path = train_imgs_path

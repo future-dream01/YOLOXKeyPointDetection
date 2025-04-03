@@ -1,6 +1,6 @@
 # 这是基于YOLOX，经修改过后可以用于关键点检测的模型，对应标注软件：Labelme
 ## 准备数据集
-1. 将特征点标注软件labelme标注后的json文件放入datasets/json文件夹,将图片文件放入datasets/picture文件夹
+1. 将特征点标注软件labelme标注后的json文件放入datasets/jsons文件夹,将图片文件放入datasets/pictures文件夹
 2. 如果图片数量和json文件数量不一样，运行**datasets/find.py**,找出两者不一样的文件名
 3. 运行**datasets/json_txt.py**,这一步是为了将json文件转换为每行只包含标签和特征点坐标的txt文件
 4. 运行**datasets/test.py**，在程序内修改特征点数，此程序确保转换后的txt文件中每行的元素个数一定是**标签+特征点个数*2**
@@ -18,7 +18,7 @@
 1. `python tools/demo.py image -f exps/example/custom/yolox_s.py -c YOLOX_outputs/yolox_s/last_epoch_ckpt.pth --path datasets/coco/images --conf 0.6 --nms 0.1 --tsize 640 --save_result --device gpu `
 
 ## 转成ONNX格式,看结构图
-1. `python3 tools/export_onnx.py --output-name yolox.onnx -f exps/example/custom/yolox_s.py -c YOLOX_outputs/yolox_s/best_ckpt.pth`
+1. `python3 tools/export_onnx.py --output-name yolox.onnx -f exps/example/custom/yolox_s.py -c YOLOX_outputs/yolox_s/last_epoch_ckpt.pth`
 
 ## 转成TensoRT格式，加速推理
 1. `python3 tools/trt.py -f exps/example/custom/yolox_s.py -c best_ckpt.pth `

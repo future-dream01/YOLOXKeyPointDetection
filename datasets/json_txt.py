@@ -25,6 +25,6 @@ def convert_json_to_txt(input_folder, output_folder):
             process_json(json_file, output_file)
 
 # 使用示例
-input_folder = 'json'
-output_folder = 'txt'
+input_folder = 'datasets/jsons'
+output_folder = 'datasets/txts'
 convert_json_to_txt(input_folder, output_folder)

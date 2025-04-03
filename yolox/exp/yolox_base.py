@@ -42,11 +42,11 @@ class Exp(BaseExp):                 # 实验配置类
 
         # --------------- transform config ----------------- #
         #Mosaic
-        self.mosaic_prob = 0.0          # 不使用mosaic增强
+        self.mosaic_prob = 0.2          # 不使用mosaic增强
         self.mosaic_scale = (0.3, 2)
         #Mixup
         self.enable_mixup = False
-        self.mixup_prob = 0.0           # 不适用mixup增强
+        self.mixup_prob = 0.2          # 不适用mixup增强
         self.mixup_scale = (0.5, 1.5)
         #HSV
         self.hsv_prob = 1.0
@@ -65,9 +65,9 @@ class Exp(BaseExp):                 # 实验配置类
         self.warmup_epochs = 20
         self.max_epoch = 20            # 训练轮次数
         self.warmup_lr = 0
-        self.basic_lr_per_img = 0.0004 # 每张图片的基础学习率
+        self.basic_lr_per_img = 0.0001 # 每张图片的基础学习率
         self.scheduler = "yoloxwarmcos"
-        self.no_aug_epochs = 50        # 最后的50个轮次不使用数据增强
+        self.no_aug_epochs = 200        # 最后的50个轮次不使用数据增强
         self.min_lr_ratio = 0.06       # 最小学习率比例
         self.ema = True
 

@@ -12,7 +12,8 @@ from pycocotools.coco import COCO
 from ..dataloading import get_yolox_datadir
 from .datasets_wrapper import Dataset
 
-
+print("运行到我啦，相对导入成立")
+print(__package__)
 def remove_useless_info(coco):
     """
     Remove useless info in coco dataset. COCO object is modified inplace.

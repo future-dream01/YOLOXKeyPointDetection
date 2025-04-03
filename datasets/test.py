@@ -22,5 +22,5 @@ def check_folder(folder_path):
     return True
 
 # 使用示例
-folder_path = 'txt'
+folder_path = 'datasets/txts'
 check_folder(folder_path)
