@@ -12,13 +12,20 @@
 2. 修改**yolox/data/datasets/coco_classes.py**文件，在**COCO_CLASSES**类中加上自己的类名，注意此处的顺序需要和class_names.txt中的顺序相同
 
 ## 训练
-1. `python tools/train.py -f exps/example/custom/yolox_s.py -d 0 -b 4 --fp16  `
+1. 终端输入`python tools/train.py -f exps/example/custom/yolox_s.py -d 0 -b 4 --fp16 `
+
+## 断点恢复训练
+1. 终端输入`python tools/train.py -f exps/example/custom/yolox_s.py -c YOLOX_outputs/yolox_s/last_epoch_ckpt.pth --resume --start_epoch x -d 0 -b 4 --fp16` 其中x=**上次终止时的epoch+1**
+   
+## 查看训练日志
+1. 终端输入`tensorboard --logdir=./YOLOX_outputs/yolox_s/tensorboard`
+2. 终端不要关，浏览器搜 `http://localhost:6006/`
 
 ## 推理
-1. `python tools/demo.py image -f exps/example/custom/yolox_s.py -c YOLOX_outputs/yolox_s/last_epoch_ckpt.pth --path datasets/coco/images --conf 0.6 --nms 0.1 --tsize 640 --save_result --device gpu `
+1. 终端输入`python tools/demo.py image -f exps/example/custom/yolox_s.py -c YOLOX_outputs/yolox_s/last_epoch_ckpt.pth --path datasets/coco/images --conf 0.6 --nms 0.1 --tsize 640 --save_result --device gpu `
 
 ## 转成ONNX格式,看结构图
-1. `python3 tools/export_onnx.py --output-name yolox.onnx -f exps/example/custom/yolox_s.py -c YOLOX_outputs/yolox_s/last_epoch_ckpt.pth`
+1. 终端输入`python3 tools/export_onnx.py --output-name yolox.onnx -f exps/example/custom/yolox_s.py -c YOLOX_outputs/yolox_s/last_epoch_ckpt.pth`
 
 ## 转成TensoRT格式，加速推理
-1. `python3 tools/trt.py -f exps/example/custom/yolox_s.py -c best_ckpt.pth `
+1. 终端输入`python3 tools/trt.py -f exps/example/custom/yolox_s.py -c best_ckpt.pth `

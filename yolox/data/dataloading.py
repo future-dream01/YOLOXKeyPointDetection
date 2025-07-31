@@ -14,7 +14,6 @@ from torch.utils.data.dataloader import default_collate
 
 from .samplers import YoloBatchSampler
 
-# 获取datasets的绝对路径
 def get_yolox_datadir(): 
     """
     get dataset dir of YOLOX. If environment variable named `YOLOX_DATADIR` is set,
