@@ -18,7 +18,7 @@ class Exp(MyExp):
         self.train_ann = "instances_train2017.json"
         self.val_ann = "instances_val2017.json"
 
-        self.num_classes = 1        # 类别数
+        self.num_classes = 5        # 类别数
         self.num_apexes=4           # 特征点数
         self.max_epoch = 300        # 最大轮次数
         self.data_num_workers = 4

@@ -3,5 +3,9 @@
 # Copyright (c) Megvii, Inc. and its affiliates.
 
 COCO_CLASSES = (
-"tar"
+"tiger",
+"elephant",
+"peacock",
+"wolf",
+"monkey"
 )
